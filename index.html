@@ -6,193 +6,214 @@
     <title>Sobocamp Software House - Company Profile</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body class="bg-gray-50 text-gray-800 font-sans antialiased selection:bg-blue-500 selection:text-white">
+    
+    <style>
+        html {
+            /* Memberikan ruang agar judul section tidak tertutup/mepet oleh sticky navbar */
+            scroll-padding-top: 85px;
+        }
 
-    <nav class="sticky top-0 z-50 w-full bg-slate-900/90 backdrop-blur-md border-b border-slate-800/50 shadow-lg transition-all">
+        /* Kelas kustom tambahan untuk mendukung transisi kehalusan efek memudar */
+        .fade-section {
+            transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-blue-600 selection:text-white">
+
+    <nav class="sticky top-0 z-50 w-full bg-slate-900/80 backdrop-blur-md border-b border-slate-800/60 shadow-md">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-black tracking-wider text-blue-400">SOBOCAMP.</div>
-            <div class="space-x-6 text-sm font-medium text-gray-300">
-                <a href="#about" class="hover:text-blue-400 transition">Tentang</a>
-                <a href="#services" class="hover:text-blue-400 transition">Layanan</a>
-                <a href="#portfolio" class="hover:text-blue-400 transition">Portofolio</a>
-                <a href="#warranty" class="hover:text-blue-400 transition">Garansi</a>
+            <div class="text-2xl font-black tracking-wider bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">SOBOCAMP.</div>
+            <div class="space-x-1 md:space-x-4 text-sm font-medium text-slate-300">
+                <a href="#about" class="nav-link px-3 py-2 rounded-lg hover:bg-slate-800 hover:text-blue-400 transition-all duration-200">Tentang</a>
+                <a href="#services" class="nav-link px-3 py-2 rounded-lg hover:bg-slate-800 hover:text-blue-400 transition-all duration-200">Layanan</a>
+                <a href="#portfolio" class="nav-link px-3 py-2 rounded-lg hover:bg-slate-800 hover:text-blue-400 transition-all duration-200">Portofolio</a>
+                <a href="#warranty" class="nav-link px-3 py-2 rounded-lg hover:bg-slate-800 hover:text-blue-400 transition-all duration-200">Garansi</a>
             </div>
         </div>
     </nav>
 
-    <header class="bg-slate-900 text-white min-h-[80vh] flex flex-col justify-between border-b-4 border-blue-600 relative">
-        <div class="max-w-4xl mx-auto px-6 text-center my-auto py-16">
-            <span class="text-blue-400 font-bold tracking-widest text-xs uppercase bg-blue-950/50 px-4 py-2 rounded-full border border-blue-900/50">Company Profile</span>
-            <h1 class="text-5xl md:text-6xl font-black mt-6 tracking-tight">SOBOCAMP SOFTWARE HOUSE</h1>
-            <p class="text-xl md:text-2xl text-gray-400 font-light mt-4 italic">"Empowering Digital Solutions with Lifetime Integrity"</p>
-            <div class="w-20 h-1 bg-blue-500 mx-auto mt-8 rounded-full"></div>
-            <p class="text-sm font-mono text-gray-500 mt-4 tracking-widest">we make IT reliable.</p>
+    <header class="relative bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 text-white min-h-[85vh] flex flex-col justify-between overflow-hidden">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        
+        <div class="relative max-w-4xl mx-auto px-6 text-center my-auto py-20 z-10">
+            <span class="text-blue-400 font-extrabold tracking-widest text-xs uppercase bg-blue-950/60 px-4 py-2 rounded-full border border-blue-800/40 shadow-inner">Company Profile</span>
+            <h1 class="text-4xl md:text-6xl font-black mt-6 tracking-tight leading-none bg-gradient-to-r from-white via-slate-100 to-slate-400 bg-clip-text text-transparent">
+                SOBOCAMP SOFTWARE HOUSE
+            </h1>
+            <p class="text-lg md:text-2xl text-slate-400 font-light mt-6 max-w-2xl mx-auto leading-relaxed">
+                "Empowering Digital Solutions with <span class="text-blue-400 font-medium italic">Lifetime Integrity</span>"
+            </p>
+            <div class="w-16 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto mt-8 rounded-full"></div>
+            <p class="text-xs font-mono text-slate-500 mt-4 tracking-widest uppercase">we make IT reliable.</p>
             <div class="mt-10">
-                <a href="#about" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3.5 rounded-lg font-semibold shadow-lg shadow-blue-900/30 transition-all inline-block text-sm">Pelajari Lebih Lanjut</a>
+                <a href="#about" class="nav-link bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white px-8 py-3.5 rounded-xl font-semibold shadow-lg shadow-blue-500/20 hover:shadow-blue-500/30 transition-all duration-300 transform hover:-translate-y-0.5 inline-block text-sm tracking-wide">
+                    Pelajari Lebih Lanjut <i class="fa-solid fa-arrow-down ml-2 text-xs"></i>
+                </a>
             </div>
         </div>
 
-        <div class="bg-slate-950/60 py-4 backdrop-blur-sm">
-            <div class="max-w-6xl mx-auto px-6 flex flex-wrap justify-between text-xs text-gray-400 gap-4">
-                <div><i class="fa-solid fa-globe text-blue-400 mr-2"></i>www.sobocamp.vercel.app</div>
-                <!-- <div><i class="fa-solid fa-server text-blue-400 mr-2"></i>demoapp.sobocamp.my.id</div> -->
-                <div><i class="fa-solid fa-location-dot text-blue-400 mr-2"></i>Jawa Tengah, Indonesia</div>
+        <div class="relative border-t border-slate-900 bg-slate-950/40 py-4 backdrop-blur-xs z-10">
+            <div class="max-w-6xl mx-auto px-6 flex flex-wrap justify-between text-xs text-slate-400 gap-4 font-medium">
+                <div class="flex items-center"><i class="fa-solid fa-globe text-blue-400 mr-2.5 text-sm"></i>www.sobocamp.vercel.app</div>
+                <div class="flex items-center"><i class="fa-solid fa-location-dot text-blue-400 mr-2.5 text-sm"></i>Jawa Tengah, Indonesia</div>
             </div>
         </div>
     </header>
 
-    <section id="about" class="py-24 max-w-4xl mx-auto px-6">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-black tracking-tight text-slate-900">Tentang Perusahaan</h2>
-            <div class="w-12 h-1 bg-blue-500 mx-auto mt-3 rounded-full"></div>
+    <section id="about" class="fade-section opacity-0 translate-y-4 py-28 max-w-4xl mx-auto px-6">
+        <div class="text-center mb-14">
+            <span class="text-blue-600 font-extrabold uppercase tracking-widest text-xs">Profil Singkat</span>
+            <h2 class="text-3xl md:text-4xl font-black tracking-tight text-slate-900 mt-1">Tentang Perusahaan</h2>
+            <div class="w-12 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto mt-4 rounded-full"></div>
         </div>
-        <div class="prose max-w-none text-gray-600 space-y-6 leading-relaxed text-base md:text-lg text-center">
+        <div class="text-slate-600 space-y-6 leading-relaxed text-base md:text-lg text-center font-normal">
             <p>
-                <strong>SOBOCAMP</strong> merupakan unit usaha mandiri (<em>software house</em>) yang bergerak di bidang teknologi informasi dan pengembangan perangkat lunak berbasis di Jawa Tengah. Sobocamp melayani jasa pengembangan sistem informasi kustom, baik berbasis <em>web-responsive</em> maupun aplikasi manajemen internal. Mitra kami meliputi pelaku UMKM, koperasi, sektor swasta, hingga lembaga pendidikan (SD/SMP/SMA/SMK).
+                <strong class="text-slate-900 font-semibold">SOBOCAMP</strong> merupakan unit usaha mandiri (<em>software house</em>) yang bergerak di bidang teknologi informasi dan pengembangan perangkat lunak berbasis di Jawa Tengah. Sobocamp melayani jasa pengembangan sistem informasi kustom, baik berbasis <em>web-responsive</em> maupun aplikasi manajemen internal. Mitra kami meliputi pelaku UMKM, koperasi, sektor swasta, hingga lembaga pendidikan (SD/SMP/SMA/SMK).
             </p>
             <p>
-                Kini, Sobocamp berkomitmen penuh untuk menjawab tantangan era digitalisasi dengan menyediakan <em>source code</em> yang 100% orisinal, andal, bebas dari batasan lisensi perangkat, serta memberikan jaminan purnajual berupa <strong>Garansi Seumur Hidup (<em>Lifetime Bug Warranty</em>)</strong>. Kode program yang kami susun dirancang dengan arsitektur yang bersih, menjadikannya sangat adaptif untuk kebutuhan operasional maupun sebagai referensi belajar bagi para pengembang dan akademisi.
+                Kini, Sobocamp berkomitmen penuh untuk menjawab tantangan era digitalisasi dengan menyediakan <em>source code</em> yang 100% orisinal, andal, bebas dari batasan lisensi perangkat, serta memberikan jaminan purnajual berupa <strong class="text-blue-600 font-semibold">Garansi Seumur Hidup (<em>Lifetime Bug Warranty</em>)</strong>. Kode program yang kami susun dirancang dengan arsitektur yang bersih, menjadikannya sangat adaptif untuk kebutuhan operasional maupun sebagai referensi belajar bagi para pengembang dan akademisi.
             </p>
         </div>
-        <div class="mt-12 bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-xl max-w-2xl mx-auto shadow-sm">
-            <p class="text-blue-900 italic font-medium text-center">
+        <div class="mt-14 bg-gradient-to-r from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-8 rounded-r-2xl max-w-2xl mx-auto shadow-xs">
+            <p class="text-slate-800 italic font-medium text-center leading-relaxed">
                 "Berbekal dedikasi dalam arsitektur kode yang bersih dan orisinal, Sobocamp berkomitmen untuk terus melayani pengembangan sistem secara profesional dan berintegritas."
             </p>
         </div>
     </section>
 
-    <section class="bg-slate-900 text-white py-24">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-12 items-start">
+    <section class="fade-section opacity-0 translate-y-4 bg-slate-900 text-white py-28 relative overflow-hidden">
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-14 items-start relative z-10">
             <div class="md:col-span-1">
-                <span class="text-blue-400 font-bold uppercase tracking-widest text-xs">Our Purpose</span>
-                <h2 class="text-4xl font-black mt-2 tracking-tight">Visi & Misi</h2>
-                <div class="w-12 h-1 bg-blue-500 mt-4 rounded-full"></div>
-                <p class="text-gray-400 mt-6 leading-relaxed text-sm">Prinsip dasar kami dalam membangun produk digital berkualitas tinggi demi kepuasan mitra jangka panjang.</p>
+                <span class="text-blue-400 font-extrabold uppercase tracking-widest text-xs">Our Purpose</span>
+                <h2 class="text-3xl md:text-4xl font-black mt-1 tracking-tight">Visi & Misi</h2>
+                <div class="w-12 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 mt-4 rounded-full"></div>
+                <p class="text-slate-400 mt-6 leading-relaxed text-sm">Prinsip dasar kami dalam membangun produk digital berkualitas tinggi demi kepuasan mitra jangka panjang.</p>
             </div>
             <div class="md:col-span-2 space-y-8">
-                <div class="bg-slate-800/50 border border-slate-800 p-8 rounded-xl">
-                    <h3 class="text-xl font-bold text-blue-400 mb-3"><i class="fa-solid fa-eye mr-2"></i>Visi</h3>
-                    <p class="text-gray-300 leading-relaxed">Menjadi <em>software house</em> terpercaya di Indonesia yang mampu mentransformasikan proses konvensional menjadi digital melalui sistem yang andal, aman, mudah digunakan, serta mendukung kemandirian teknologi nasional.</p>
+                <div class="bg-slate-800/40 border border-slate-800 p-8 rounded-2xl shadow-inner">
+                    <h3 class="text-xl font-bold text-blue-400 mb-3 flex items-center"><i class="fa-solid fa-eye mr-3 text-lg"></i>Visi</h3>
+                    <p class="text-slate-300 leading-relaxed text-sm md:text-base">Menjadi <em>software house</em> terpercaya di Indonesia yang mampu mentransformasikan proses konvensional menjadi digital melalui sistem yang andal, aman, mudah digunakan, serta mendukung kemandirian teknologi nasional.</p>
                 </div>
-                <div class="bg-slate-800/50 border border-slate-800 p-8 rounded-xl">
-                    <h3 class="text-xl font-bold text-blue-400 mb-4"><i class="fa-solid fa-bullseye mr-2"></i>Misi</h3>
-                    <ul class="space-y-4 text-gray-300 text-sm">
-                        <li class="flex items-start"><i class="fa-solid fa-check text-blue-500 mt-1 mr-3 flex-shrink-0"></i><span><strong>Mengembangkan Software yang Orisinal & Inovatif:</strong> Merancang kode secara mandiri untuk menjamin keamanan jangka panjang tanpa produk bajakan.</span></li>
-                        <li class="flex items-start"><i class="fa-solid fa-check text-blue-500 mt-1 mr-3 flex-shrink-0"></i><span><strong>Menghadirkan Solusi Tanpa Batas Perangkat:</strong> Menyediakan produk teknologi tanpa batasan lisensi komputer guna efisiensi biaya investasi teknologi klien.</span></li>
-                        <li class="flex items-start"><i class="fa-solid fa-check text-blue-500 mt-1 mr-3 flex-shrink-0"></i><span><strong>Mendampingi Klien dengan Garansi Berkelanjutan:</strong> Menyediakan layanan purnajual prima berupa garansi seumur hidup terhadap gangguan teknis (<em>bug/error</em>).</span></li>
-                        <li class="flex items-start"><i class="fa-solid fa-check text-blue-500 mt-1 mr-3 flex-shrink-0"></i><span><strong>Berperan Serta dalam Dunia Edukasi Vokasi:</strong> Menyediakan arsitektur kode terstruktur rapi untuk mendukung peningkatan skill pemrograman siswa, mahasiswa, dan guru.</span></li>
+                <div class="bg-slate-800/40 border border-slate-800 p-8 rounded-2xl shadow-inner">
+                    <h3 class="text-xl font-bold text-blue-400 mb-5 flex items-center"><i class="fa-solid fa-bullseye mr-3 text-lg"></i>Misi</h3>
+                    <ul class="space-y-4 text-slate-300 text-sm">
+                        <li class="flex items-start"><i class="fa-solid fa-circle-check text-cyan-400 mt-1 mr-3 flex-shrink-0 text-base"></i><span><strong class="text-white font-medium">Mengembangkan Software yang Orisinal & Inovatif:</strong> Merancang kode secara mandiri untuk menjamin keamanan jangka panjang tanpa produk bajakan.</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-circle-check text-cyan-400 mt-1 mr-3 flex-shrink-0 text-base"></i><span><strong class="text-white font-medium">Menghadirkan Solusi Tanpa Batas Perangkat:</strong> Menyediakan produk teknologi tanpa batasan lisensi komputer guna efisiensi biaya investasi teknologi klien.</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-circle-check text-cyan-400 mt-1 mr-3 flex-shrink-0 text-base"></i><span><strong class="text-white font-medium">Mendampingi Klien dengan Garansi Berkelanjutan:</strong> Menyediakan layanan purnajual prima berupa garansi seumur hidup terhadap gangguan teknis (<em>bug/error</em>).</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-circle-check text-cyan-400 mt-1 mr-3 flex-shrink-0 text-base"></i><span><strong class="text-white font-medium">Berperan Serta dalam Dunia Edukasi Vokasi:</strong> Menyediakan arsitektur kode terstruktur rapi untuk mendukung peningkatan skill pemrograman siswa, mahasiswa, dan guru.</span></li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="services" class="py-24 max-w-6xl mx-auto px-6">
+    <section id="services" class="fade-section opacity-0 translate-y-4 py-28 max-w-6xl mx-auto px-6">
         <div class="text-center mb-16">
-            <span class="text-blue-600 font-bold uppercase tracking-widest text-xs">Apa Yang Kami Lakukan</span>
-            <h2 class="text-4xl font-black mt-2 tracking-tight text-slate-900">Layanan Utama Kami</h2>
-            <div class="w-12 h-1 bg-blue-500 mx-auto mt-3 rounded-full"></div>
+            <span class="text-blue-600 font-extrabold uppercase tracking-widest text-xs">Apa Yang Kami Lakukan</span>
+            <h2 class="text-3xl md:text-4xl font-black mt-1 tracking-tight text-slate-900">Layanan Utama Kami</h2>
+            <div class="w-12 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto mt-4 rounded-full"></div>
         </div>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white border border-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition">
-                <div class="text-blue-600 text-3xl mb-4"><i class="fa-solid fa-code"></i></div>
-                <h3 class="text-xl font-bold mb-3 text-slate-900">Custom Web Development</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">Pembuatan perangkat lunak berbasis web kustom sesuai kebutuhan spesifik bisnis. Menggunakan ekosistem modern: PHP (Laravel/CodeIgniter), MySQL, Bootstrap, AJAX, & JQuery.</p>
+            <div class="bg-white border border-slate-100 p-8 rounded-2xl shadow-xs hover:shadow-xl hover:border-blue-100 transition-all duration-300 group">
+                <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300"><i class="fa-solid fa-code"></i></div>
+                <h3 class="text-lg font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition-colors">Custom Web Development</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Pembuatan perangkat lunak berbasis web kustom sesuai kebutuhan spesifik bisnis. Menggunakan ekosistem modern: PHP (Laravel/CodeIgniter), MySQL, Bootstrap, AJAX, & JQuery.</p>
             </div>
-            <div class="bg-white border border-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition">
-                <div class="text-blue-600 text-3xl mb-4"><i class="fa-solid fa-school"></i></div>
-                <h3 class="text-xl font-bold mb-3 text-slate-900">SIM Instansi & Sekolah</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">Platform manajemen tata kelola internal sekolah dan instansi. Mencakup digitalisasi administrasi, database guru/siswa, dan pelaporan dinamis.</p>
+            <div class="bg-white border border-slate-100 p-8 rounded-2xl shadow-xs hover:shadow-xl hover:border-blue-100 transition-all duration-300 group">
+                <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300"><i class="fa-solid fa-school"></i></div>
+                <h3 class="text-lg font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition-colors">SIM Instansi & Sekolah</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Platform manajemen tata kelola internal sekolah dan instansi. Mencakup digitalisasi administrasi, database guru/siswa, dan pelaporan dinamis.</p>
             </div>
-            <div class="bg-white border border-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition">
-                <div class="text-blue-600 text-3xl mb-4"><i class="fa-solid fa-user-graduate"></i></div>
-                <h3 class="text-xl font-bold mb-3 text-slate-900">Program Magang Industri</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">Menerima siswa SMK dan mahasiswa magang. Dibimbing langsung dalam proyek riil mempelajari standarisasi industri (Clean Code & MVC Architecture).</p>
+            <div class="bg-white border border-slate-100 p-8 rounded-2xl shadow-xs hover:shadow-xl hover:border-blue-100 transition-all duration-300 group">
+                <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300"><i class="fa-solid fa-user-graduate"></i></div>
+                <h3 class="text-lg font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition-colors">Program Magang Industri</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Menerima siswa SMK dan mahasiswa magang. Dibimbing langsung dalam proyek riil mempelajari standarisasi industri (Clean Code & MVC Architecture).</p>
             </div>
-            <div class="bg-white border border-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition">
-                <div class="text-blue-600 text-3xl mb-4"><i class="fa-solid fa-book-open"></i></div>
-                <h3 class="text-xl font-bold mb-3 text-slate-900">Kelas Industri Vokasi</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">Kemitraan khusus SMK Jurusan PPLG/TJKT meliputi penyelarasan kurikulum sekolah dengan kebutuhan industri serta penyediaan modul proyek.</p>
+            <div class="bg-white border border-slate-100 p-8 rounded-2xl shadow-xs hover:shadow-xl hover:border-blue-100 transition-all duration-300 group">
+                <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300"><i class="fa-solid fa-book-open"></i></div>
+                <h3 class="text-lg font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition-colors">Kelas Industri Vokasi</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Kemitraan khusus SMK Jurusan PPLG/TJKT meliputi penyelarasan kurikulum sekolah dengan kebutuhan industri serta penyediaan modul proyek.</p>
             </div>
-            <div class="bg-white border border-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition">
-                <div class="text-blue-600 text-3xl mb-4"><i class="fa-solid fa-laptop-code"></i></div>
-                <h3 class="text-xl font-bold mb-3 text-slate-900">IT Training & Pelatihan</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">Layanan peningkatan skill pemrograman (HTML, CSS, PHP native, Framework Laravel/CodeIgniter) untuk siswa, mahasiswa, dan guru.</p>
+            <div class="bg-white border border-slate-100 p-8 rounded-2xl shadow-xs hover:shadow-xl hover:border-blue-100 transition-all duration-300 group">
+                <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300"><i class="fa-solid fa-laptop-code"></i></div>
+                <h3 class="text-lg font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition-colors">IT Training & Pelatihan</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Layanan peningkatan skill pemrograman (HTML, CSS, PHP native, Framework Laravel/CodeIgniter) untuk siswa, mahasiswa, dan guru.</p>
             </div>
-            <div class="bg-white border border-gray-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition">
-                <div class="text-blue-600 text-3xl mb-4"><i class="fa-solid fa-comments"></i></div>
-                <h3 class="text-xl font-bold mb-3 text-slate-900">Konsultasi IT & Arsitektur</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">Konsultasi teknis penataan data, migrasi database lokal (XAMPP Localhost) ke Online Hosting/VPS, dan optimasi keamanan sistem.</p>
+            <div class="bg-white border border-slate-100 p-8 rounded-2xl shadow-xs hover:shadow-xl hover:border-blue-100 transition-all duration-300 group">
+                <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300"><i class="fa-solid fa-comments"></i></div>
+                <h3 class="text-lg font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition-colors">Konsultasi IT & Arsitektur</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Konsultasi teknis penataan data, migrasi database lokal (XAMPP Localhost) ke Online Hosting/VPS, dan optimasi keamanan sistem.</p>
             </div>
         </div>
     </section>
 
-    <section id="portfolio" class="bg-gray-100 py-24">
+    <section id="portfolio" class="fade-section opacity-0 translate-y-4 bg-slate-100 py-28">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-16">
-                <span class="text-blue-600 font-bold uppercase tracking-widest text-xs">Produk Unggulan</span>
-                <h2 class="text-4xl font-black mt-2 tracking-tight text-slate-900">Katalog Portofolio Produk</h2>
-                <div class="w-12 h-1 bg-blue-500 mx-auto mt-3 rounded-full"></div>
+                <span class="text-blue-600 font-extrabold uppercase tracking-widest text-xs">Produk Unggulan</span>
+                <h2 class="text-3xl md:text-4xl font-black mt-1 tracking-tight text-slate-900">Katalog Portofolio Produk</h2>
+                <div class="w-12 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto mt-4 rounded-full"></div>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-200/60 flex flex-col justify-between">
+                <div class="bg-white p-8 rounded-2xl shadow-xs border border-slate-200/70 flex flex-col justify-between hover:shadow-md transition-shadow">
                     <div>
-                        <span class="text-xs font-bold text-blue-600 tracking-wider uppercase">Fintech & Koperasi</span>
-                        <h3 class="text-2xl font-black text-slate-900 mt-1 mb-4">SIKOPER</h3>
-                        <p class="text-sm text-gray-600 leading-relaxed mb-6">SIKOPER dirancang khusus untuk memfasilitasi kebutuhan pembukuan keuangan pada koperasi simpan pinjam skala mikro, lembaga keuangan desa, maupun unit UMKM mandiri.</p>
-                        <ul class="space-y-2 text-xs border-t border-gray-100 pt-4 text-gray-600">
-                            <li><strong>Fitur Utama:</strong> Modul rekening nasabah, pencatatan transaksi simpanan (pokok/wajib/sukarela), penarikan dana, simulasi angsuran presisi, & laporan laba/rugi.</li>
-                            <li><strong>Teknologi:</strong> PHP Modern, MySQL/MariaDB, AJAX (no reload), Enkripsi Data.</li>
+                        <span class="text-[10px] font-extrabold text-blue-600 tracking-wider uppercase bg-blue-50 px-2.5 py-1 rounded-md">Fintech & Koperasi</span>
+                        <h3 class="text-xl font-black text-slate-900 mt-3 mb-3 tracking-tight">SIKOPER</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed mb-6">SIKOPER dirancang khusus untuk memfasilitasi kebutuhan pembukuan keuangan pada koperasi simpan pinjam skala mikro, lembaga keuangan desa, maupun unit UMKM mandiri.</p>
+                        <ul class="space-y-2.5 text-xs border-t border-slate-100 pt-5 text-slate-600">
+                            <li><i class="fa-solid fa-layer-group text-blue-500 mr-2"></i><strong>Fitur Utama:</strong> Modul rekening nasabah, pencatatan transaksi simpanan, penarikan dana, simulasi angsuran presisi, & laporan laba/rugi.</li>
+                            <li><i class="fa-solid fa-gear text-blue-500 mr-2"></i><strong>Teknologi:</strong> PHP Modern, MySQL/MariaDB, AJAX (no reload), Enkripsi Data.</li>
                         </ul>
                     </div>
-                    <div class="mt-6 text-xs text-slate-700 bg-gray-50 p-3 rounded-lg font-medium border border-gray-100">
+                    <div class="mt-6 text-xs text-blue-900 bg-blue-50/60 p-3.5 rounded-xl font-medium border border-blue-100/40">
                         <strong>Kelebihan:</strong> Mengutamakan akurasi kalkulasi numerik dan bebas dari batasan jumlah lisensi komputer (multi-user aman).
                     </div>
                 </div>
 
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-200/60 flex flex-col justify-between">
+                <div class="bg-white p-8 rounded-2xl shadow-xs border border-slate-200/70 flex flex-col justify-between hover:shadow-md transition-shadow">
                     <div>
-                        <span class="text-xs font-bold text-blue-600 tracking-wider uppercase">Asset Management</span>
-                        <h3 class="text-2xl font-black text-slate-900 mt-1 mb-4">SIMASET</h3>
-                        <p class="text-sm text-gray-600 leading-relaxed mb-6">SIMASET merupakan sistem berbasis web responsif yang dirancang untuk mengelola, melacak, dan menginventarisasi aset bergerak maupun tidak bergerak milik perusahaan atau instansi secara dinamis.</p>
-                        <ul class="space-y-2 text-xs border-t border-gray-100 pt-4 text-gray-600">
-                            <li><strong>Fitur Utama:</strong> Pendataan klasifikasi aktiva, pelacakan peminjaman, otomatisasi kalkulasi nilai depresiasi/penyusutan aset, serta ekspor laporan inventaris siap saji.</li>
-                            <li><strong>Teknologi:</strong> PHP 7+/8+, Framework CodeIgniter/Laravel, MySQL, AdminLTE, AJAX.</li>
+                        <span class="text-[10px] font-extrabold text-blue-600 tracking-wider uppercase bg-blue-50 px-2.5 py-1 rounded-md">Asset Management</span>
+                        <h3 class="text-xl font-black text-slate-900 mt-3 mb-3 tracking-tight">SIMASET</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed mb-6">SIMASET merupakan sistem berbasis web responsif yang dirancang untuk mengelola, melacak, dan menginventarisasi aset bergerak maupun tidak bergerak milik perusahaan atau instansi secara dinamis.</p>
+                        <ul class="space-y-2.5 text-xs border-t border-slate-100 pt-5 text-slate-600">
+                            <li><i class="fa-solid fa-layer-group text-blue-500 mr-2"></i><strong>Fitur Utama:</strong> Pendataan klasifikasi aktiva, pelacakan peminjaman, otomatisasi kalkulasi nilai depresiasi aset, serta ekspor laporan inventaris siap saji.</li>
+                            <li><i class="fa-solid fa-gear text-blue-500 mr-2"></i><strong>Teknologi:</strong> PHP 7+/8+, Framework CodeIgniter/Laravel, MySQL, AdminLTE, AJAX.</li>
                         </ul>
                     </div>
-                    <div class="mt-6 text-xs text-slate-700 bg-gray-50 p-3 rounded-lg font-medium border border-gray-100">
+                    <div class="mt-6 text-xs text-blue-900 bg-blue-50/60 p-3.5 rounded-xl font-medium border border-blue-100/40">
                         <strong>Kelebihan:</strong> Sistem pencarian data aset instan, fleksibel dijalankan di Localhost (offline) maupun online hosting.
                     </div>
                 </div>
 
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-200/60 flex flex-col justify-between">
+                <div class="bg-white p-8 rounded-2xl shadow-xs border border-slate-200/70 flex flex-col justify-between hover:shadow-md transition-shadow">
                     <div>
-                        <span class="text-xs font-bold text-blue-600 tracking-wider uppercase">Edukasi Vokasi</span>
-                        <h3 class="text-2xl font-black text-slate-900 mt-1 mb-4">simPKL</h3>
-                        <p class="text-sm text-gray-600 leading-relaxed mb-6">simPKL dirancang khusus untuk memfasilitasi tata kelola administrasi, pemantauan, dan penilaian kegiatan Praktik Kerja Lapangan siswa secara digital, guna menghubungkan sekolah vokasi (SMK) dengan Dunia Usaha dan Dunia Industri (DUDI).</p>
-                        <ul class="space-y-2 text-xs border-t border-gray-100 pt-4 text-gray-600">
-                            <li><strong>Fitur Utama:</strong> Pengajuan tempat PKL, jurnal harian via mobile, absensi koordinat map, monitoring guru pembimbing, serta rekapitulasi nilai dari industri mitra.</li>
-                            <li><strong>Teknologi:</strong> PHP Modern (Laravel/CodeIgniter), MySQL, Integrasi Leaflet/Google Maps API.</li>
+                        <span class="text-[10px] font-extrabold text-blue-600 tracking-wider uppercase bg-blue-50 px-2.5 py-1 rounded-md">Edukasi Vokasi</span>
+                        <h3 class="text-xl font-black text-slate-900 mt-3 mb-3 tracking-tight">simPKL</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed mb-6">simPKL dirancang khusus untuk memfasilitasi tata kelola administrasi, pemantauan, dan penilaian kegiatan Praktik Kerja Lapangan siswa secara digital, guna menghubungkan sekolah vokasi (SMK) dengan Dunia Usaha dan Dunia Industri (DUDI).</p>
+                        <ul class="space-y-2.5 text-xs border-t border-slate-100 pt-5 text-slate-600">
+                            <li><i class="fa-solid fa-layer-group text-blue-500 mr-2"></i><strong>Fitur Utama:</strong> Pengajuan tempat PKL, jurnal harian via mobile, absensi koordinat map, monitoring guru pembimbing, serta rekapitulasi nilai dari industri mitra.</li>
+                            <li><i class="fa-solid fa-gear text-blue-500 mr-2"></i><strong>Teknologi:</strong> PHP Modern (Laravel/CodeIgniter), MySQL, Integrasi Leaflet/Google Maps API.</li>
                         </ul>
                     </div>
-                    <div class="mt-6 text-xs text-slate-700 bg-gray-50 p-3 rounded-lg font-medium border border-gray-100">
+                    <div class="mt-6 text-xs text-blue-900 bg-blue-50/60 p-3.5 rounded-xl font-medium border border-blue-100/40">
                         <strong>Kelebihan:</strong> Memangkas birokrasi berkas fisik (paperless) dan mempermudah sinkronisasi data real-time antara sekolah dan industri mitra secara berkelanjutan.
                     </div>
                 </div>
 
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-200/60 flex flex-col justify-between">
+                <div class="bg-white p-8 rounded-2xl shadow-xs border border-slate-200/70 flex flex-col justify-between hover:shadow-md transition-shadow">
                     <div>
-                        <span class="text-xs font-bold text-blue-600 tracking-wider uppercase">Assessment System</span>
-                        <h3 class="text-2xl font-black text-slate-900 mt-1 mb-4">cbt</h3>
-                        <p class="text-sm text-gray-600 leading-relaxed mb-6">cbt (Computer Based Test) dirancang khusus untuk memenuhi kebutuhan pelaksanaan ujian sekolah, asesmen kompetensi, maupun ujian harian berbasis komputer/smartphone yang aman, jujur, dan efisien.</p>
-                        <ul class="space-y-2 text-xs border-t border-gray-100 pt-4 text-gray-600">
-                            <li><strong>Fitur Utama:</strong> Bank soal dinamis (pilihan ganda, mencocokkan, jawaban singkat), acak soal (randomize), timer, anti-cheat locker tab, & analisis nilai otomatis instan.</li>
-                            <li><strong>Teknologi:</strong> PHP Modern backend, MySQL teroptimasi indexing tinggi, AJAX auto-save berkala.</li>
+                        <span class="text-[10px] font-extrabold text-blue-600 tracking-wider uppercase bg-blue-50 px-2.5 py-1 rounded-md">Assessment System</span>
+                        <h3 class="text-xl font-black text-slate-900 mt-3 mb-3 tracking-tight">cbt</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed mb-6">cbt (Computer Based Test) dirancang khusus untuk memenuhi kebutuhan pelaksanaan ujian sekolah, asesmen kompetensi, maupun ujian harian berbasis komputer/smartphone yang aman, jujur, dan efisien.</p>
+                        <ul class="space-y-2.5 text-xs border-t border-slate-100 pt-5 text-slate-600">
+                            <li><i class="fa-solid fa-layer-group text-blue-500 mr-2"></i><strong>Fitur Utama:</strong> Bank soal dinamis (pilihan ganda, mencocokkan, jawaban singkat), acak soal (randomize), timer, anti-cheat locker tab, & analisis nilai otomatis instan.</li>
+                            <li><i class="fa-solid fa-gear text-blue-500 mr-2"></i><strong>Teknologi:</strong> PHP Modern backend, MySQL teroptimasi indexing tinggi, AJAX auto-save berkala.</li>
                         </ul>
                     </div>
-                    <div class="mt-6 text-xs text-slate-700 bg-gray-50 p-3 rounded-lg font-medium border border-gray-100">
+                    <div class="mt-6 text-xs text-blue-900 bg-blue-50/60 p-3.5 rounded-xl font-medium border border-blue-100/40">
                         <strong>Kelebihan:</strong> Tangguh menangani ribuan siswa simultan (high concurrency), otomatisasi penilaian hemat waktu guru, bergaransi teknis seumur hidup.
                     </div>
                 </div>
@@ -200,44 +221,88 @@
         </div>
     </section>
 
-    <section id="warranty" class="py-24 max-w-4xl mx-auto px-6">
-        <div class="bg-slate-900 text-white rounded-3xl p-8 md:p-12 border-b-8 border-blue-600 shadow-xl">
-            <span class="text-blue-400 font-bold uppercase tracking-widest text-xs">Jaminan Mutu Utama</span>
-            <h2 class="text-3xl font-black mt-1 mb-6 tracking-tight">Lifetime Warranty Agreement & Terms</h2>
-            <div class="space-y-4 text-sm text-gray-300 leading-relaxed">
-                <p><span class="text-blue-400 font-bold mr-2">01.</span><strong>Cakupan Garansi:</strong> Sobocamp memberikan garansi penuh seumur hidup terhadap kesalahan logika kode (<em>system bug</em>) or kegagalan fungsional sistem (<em>system error</em>) yang bersumber dari source code asli produk kami.</p>
-                <p><span class="text-blue-400 font-bold mr-2">02.</span><strong>Layanan Perbaikan Gratis:</strong> Segala bentuk perbaikan bug kritis yang dilaporkan oleh klien tidak akan dikenakan biaya tambahan apa pun secara permanen.</p>
-                <p><span class="text-blue-400 font-bold mr-2">03.</span><strong>Kemandirian Infrastruktur:</strong> Garansi tetap berlaku baik saat aplikasi dijalankan pada server lokal (<em>Localhost/XAMPP</em>) maupun di lingkungan production server (<em>Cloud/VPS Hosting</em>).</p>
-                <p><span class="text-blue-400 font-bold mr-2">04.</span><strong>Batas Pengecualian:</strong> Garansi purnajual tidak mencakup kerusakan sistem akibat modifikasi kode secara mandiri oleh pihak luar, serangan siber (malware/hacking akibat kelalaian kredensial hosting klien), atau kerusakan hardware.</p>
+    <section id="warranty" class="fade-section opacity-0 translate-y-4 py-28 max-w-4xl mx-auto px-6">
+        <div class="bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950 text-white rounded-3xl p-8 md:p-12 border-b-8 border-blue-600 shadow-2xl relative overflow-hidden">
+            <div class="absolute -top-10 -right-10 w-40 h-40 bg-blue-500/5 rounded-full blur-2xl"></div>
+            <span class="text-blue-400 font-extrabold uppercase tracking-widest text-xs">Jaminan Mutu Utama</span>
+            <h2 class="text-2xl md:text-3xl font-black mt-1 mb-8 tracking-tight">Lifetime Warranty Agreement & Terms</h2>
+            <div class="space-y-5 text-sm text-slate-300 leading-relaxed">
+                <p class="flex items-start"><span class="text-blue-400 font-black mr-3 text-base font-mono">01.</span><span><strong class="text-white font-semibold">Cakupan Garansi:</strong> Sobocamp memberikan garansi penuh seumur hidup terhadap kesalahan logika kode (<em>system bug</em>) atau kegagalan fungsional sistem (<em>system error</em>) yang bersumber dari source code asli produk kami.</span></p>
+                <p class="flex items-start"><span class="text-blue-400 font-black mr-3 text-base font-mono">02.</span><span><strong class="text-white font-semibold">Layanan Perbaikan Gratis:</strong> Segala bentuk perbaikan bug kritis yang dilaporkan oleh klien tidak akan dikenakan biaya tambahan apa pun secara permanen.</span></p>
+                <p class="flex items-start"><span class="text-blue-400 font-black mr-3 text-base font-mono">03.</span><span><strong class="text-white font-semibold">Kemandirian Infrastruktur:</strong> Garansi tetap berlaku baik saat aplikasi dijalankan pada server lokal (<em>Localhost/XAMPP</em>) maupun di lingkungan production server (<em>Cloud/VPS Hosting</em>).</span></p>
+                <p class="flex items-start"><span class="text-blue-400 font-black mr-3 text-base font-mono">04.</span><span><strong class="text-white font-semibold">Batas Pengecualian:</strong> Garansi purnajual tidak mencakup kerusakan sistem akibat modifikasi kode secara mandiri oleh pihak luar, serangan siber (malware/hacking akibat kelalaian kredensial hosting klien), atau kerusakan hardware.</span></p>
             </div>
         </div>
     </section>
 
-    <footer class="bg-slate-950 text-gray-400 py-12 border-t border-slate-900 text-sm">
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900/60 text-sm">
         <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
             <div>
                 <div class="text-white font-black text-lg tracking-wider">SOBOCAMP SOFTWARE HOUSE</div>
-                <p class="text-xs text-gray-500 mt-1">&copy; 2026 Sobocamp. All rights reserved.</p>
+                <p class="text-xs text-slate-500 mt-1">&copy; 2026 Sobocamp. All rights reserved.</p>
             </div>
-            <div class="flex flex-wrap justify-center gap-6 text-xs">
-                <<div class="flex flex-wrap justify-center gap-6 text-xs">
-                <!-- Tautan WhatsApp (Ganti nomor 628xxx dengan nomor Anda) -->
+            <div class="flex flex-wrap justify-center gap-6 text-xs font-medium">
                 <a href="https://wa.me/6285200070429?text=Halo%20Sobocamp%2C%20saya%20tertarik%20dengan%20layanan%20software%20house%20Anda." 
                    target="_blank" 
-                   class="hover:text-white transition group">
-                    <i class="fa-brands fa-square-whatsapp text-green-500 mr-2 text-base align-middle group-hover:scale-110 transition-transform"></i>Hubungi WhatsApp
+                   class="hover:text-white transition-colors duration-200 group flex items-center">
+                    <i class="fa-brands fa-square-whatsapp text-green-500 mr-2 text-base align-middle group-hover:scale-110 transition-transform duration-200"></i>Hubungi WhatsApp
                 </a>
                 
-                <!-- Tautan Tokopedia (Ganti URL dengan link toko Anda jika ada) -->
                 <a href="https://www.tokopedia.com" 
                    target="_blank" 
-                   class="hover:text-white transition group">
-                    <i class="fa-solid fa-store text-orange-500 mr-2 text-base align-middle group-hover:scale-110 transition-transform"></i>Sobocamp Store (Tokopedia)
+                   class="hover:text-white transition-colors duration-200 group flex items-center">
+                    <i class="fa-solid fa-store text-orange-500 mr-2 text-base align-middle group-hover:scale-110 transition-transform duration-200"></i>Sobocamp Store (Tokopedia)
                 </a>
-            </div>
             </div>
         </div>
     </footer>
+
+    <script>
+        // Mengonfigurasi observer untuk mendeteksi kapan section masuk/keluar layar
+        const observerOptions = {
+            root: null, // Berdasarkan viewport browser
+            threshold: 0.15 // Animasi terpicu saat minimal 15% bagian section terlihat
+        };
+
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Ketika section masuk layar: FADE IN (Opasitas penuh & kembali ke posisi normal)
+                    entry.target.classList.remove('opacity-0', 'translate-y-4');
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                } else {
+                    // Ketika section keluar layar jauh: FADE OUT otomatis (Kembali transparan)
+                    // Ini membuat efek memudar berulang secara dinamis saat di-scroll naik/turun
+                    if (entry.boundingClientRect.top > 0) {
+                        entry.target.classList.remove('opacity-100', 'translate-y-0');
+                        entry.target.classList.add('opacity-0', 'translate-y-4');
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Mendaftarkan semua elemen section yang memiliki class 'fade-section' ke dalam pemantau observer
+        document.querySelectorAll('.fade-section').forEach(section => {
+            sectionObserver.observe(section);
+        });
+
+        // Handler untuk memuluskan lompatan klik menu navbar
+        document.querySelectorAll('.nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId.startsWith('#')) {
+                    e.preventDefault();
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
